@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font: normal normal normal 1rem/1.6 -apple-system,arial,"EB Garamond","Helvetica Neue",Helvetica,sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Arial,Helevetica,Roboto,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  background-color: #1668db;
+  color: #fff;
+  border-radius: .25rem;
+  padding: .4rem 1rem;
+}
+
+button:hover {
+  background-color: #1563cf;
+  cursor: pointer;
+}
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.draggable-cursor {
+  background: red;
+	cursor: move !important;
+	cursor: -webkit-grabbing !important;
+	cursor:    -moz-grabbing !important; 
+	cursor:         grabbing !important;
+}
+
+.foo {
+  background: linear-gradient(135deg, #0A2E4D, #004D7A); 
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  border-top: 4px solid #0074D9; 
+  box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.3); 
+  position: relative; 
+}
+
+.foo:before {
+  content: '';
+  position: absolute;
+  top: -10px; 
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+   border-radius: 5px; 
+}
+
+.foo p {
+  margin: 0;
+  font-size: 1.2rem; 
+  letter-spacing: 0.5px; 
+  line-height: 1.5; 
+}
+
+.foo a {
+  color: #39C0ED; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.4s ease, transform 0.4s ease;
+  display: inline-block;
+  position: relative; 
+}
+
+.foo a:hover {
+  color: #FFDC00; 
+  transform: scale(1.1); 
+}
+
+.foo a:after {
+  content: ' ⭐';
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-5px); 
+}
+
+.foo a:hover:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.foo a:focus {
+  outline: none; 
+  box-shadow: 0 0 5px #FFDC00; 
+}
+@media (max-width: 600px) {
+  .foo {
+      padding: 20px 10px;
+      font-size: 1rem; 
+  }
+}
